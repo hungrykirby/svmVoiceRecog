@@ -8,11 +8,11 @@ from sklearn.metrics import classification_report, accuracy_score
 def main():
     name_list = ["en_a", "ja_a", "no_voice"]
     train_x, train_y = MFCC.read_ceps(name_list, False)
-    test_x, test_y = MFCC.read_ceps(name_list)
-    svc = SVC(kernel="poly",
-        C=1000.0,
-        degree=4,
-        gamma=0.001,
+    test_x, test_y = MFCC.read_ceps(name_list, True)
+    svc = SVC(kernel="linear",
+        C=100.0,
+        degree=3,
+        gamma='auto',
         cache_size=200,
         class_weight=None,
         coef0=0.0,

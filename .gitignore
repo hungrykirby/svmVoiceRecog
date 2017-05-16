@@ -4,6 +4,8 @@ __pycache__/
 *$py.class
 cepData/
 rawDate/
+*.wav
+*.cep.py
 
 # C extensions
 *.so
